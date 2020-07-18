@@ -11,7 +11,7 @@
 (defn place-owner [p]
   ((:owners @state) p))
 
-(defn line-owner [[p1 p2 p3] line]
+(defn line-owner [[p1 p2 p3]]
   (let [owner1 (place-owner p1)
         owner2 (place-owner p2)
         owner3 (place-owner p3)]
@@ -92,7 +92,7 @@
   []
   (r/render
    [game]
-   (.getElementById js/document "root")))
+   (.getElementById js/document "app")))
 
 (defn init []
   (start))
